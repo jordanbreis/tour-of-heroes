@@ -1,0 +1,9 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+    <li *ngFor="let value of heroes">
+    <button type="button" [class.selected]="value === selectedHero" (click)="onSelect(value)" routerLink="/hero-detail/{{value.id}}">
+      <span class="badge">{{value.id}}</span>
+      <span class="name">{{value.name}}</span>
+    </button>
+  </li>
+</ul>
